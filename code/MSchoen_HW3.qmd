@@ -6,7 +6,7 @@ source: editor
 format: pdf
 ---
 
-# Set Up 
+# Part 1: Set Up 
 
 ```{r}
 #| label: set-up
@@ -26,5 +26,84 @@ kelp <- read_csv(
 step_count <- read_csv(
   here("data", "MyData_HW3_Format.csv"))
 ```
+
+# Part 2: Problems 
+
+## Problem 1 - Giant Kelp Fronds
+
+### a. An Appropriate Test
+
+To evaluate the strength of the relationship between temperature ($C^o$) and giant kelp frond elongation rate ($cm day^-1$), a Pearson correlation test and a Spearman rank correlation test would both be suited to use. The Pearson correlation test will evaluate whether there is a linear relationship between the two continuous variables while also assuming a normal distribution and linear relationship and the Spearman-rank correlation test will evaluate if a relationship exists between the two variables without requiring a normal distribution. As both ocean temperature and elongation rate are continuous and quantitative variables, both tests could be used depending on whether the data is normally distributed and linear. 
+
+### b. Create a Visualization 
+
+```{r}
+#| label: data-visualization
+
+# Creating a ggplot base layer using kelp dataset 
+  ggplot(data = kelp, 
+         mapping = aes(x = temp_c,
+                       y = kelp_elong)) +
+  
+  # First layer is a scatter plot to visualize individual observations 
+  geom_point(size = 2,
+             alpha = 0.7,
+             color = "#2E8B57",
+             shape = 21) + 
+  # Second layer is a line of best fit using a linear regression
+  geom_smooth(method = "lm",
+              color = "black",
+              linewidth = 1
+             ) + 
+  # Using custom theme 
+  theme_minimal() + 
+  # Relabeling x & y axes
+  labs(x = expression("Ocean Temperature (C"^o~")"),
+       y = expression("Kelp Elongation Rate (cm day"^-1~")"),
+       title = "The Effect of Ocean Water Temperature On 
+       Kelp Elongation Rate")
+```
+
+### c. Check Your Assumptions and Run Your Test 
+
+```{r}
+#| label: assumptions-test
+```
+
+
+### d. Results Communication 
+
+### e. Test Implications 
+
+### f. Double Check Your Own Work 
+
+## Problem 2 - Personal Data 
+
+### a. Updating Your Visualizations
+
+### b. Captions 
+
+## Problem 3 - Affective Visualization 
+
+### a. Describe An Affective Visualization 
+
+### b. Create A Sketch 
+
+### c. Make A Draft 
+
+### d. Write An Artist Statement 
+
+### e. Prep Your Materials 
+
+## Problem 4 - Statistical Critique 
+
+### a. Revisit and Summarize 
+
+### b. Visual Clarity 
+
+### c. Aesthetic Clarity 
+
+### d. Reccomendations 
+
 
 
