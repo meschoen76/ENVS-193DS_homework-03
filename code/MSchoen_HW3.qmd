@@ -243,6 +243,14 @@ For The Day & the Duration of Sleep Achieved",
 
 ### b. Captions 
 
+**Figure 1:** 
+
+Average daily step count grouped by day of the week using observations collected over the course of the observation period. Thursday had the highest average daily step count while Sunday had the lowest average daily step count, suggesting that activity levels varied noticeably depending on the day of the week.
+
+**Figure 2:**
+
+The relationship between sleep duration (minutes) and total daily step count across all observations collected during the study period. The fitted linear regression line suggests a slight negative relationship between sleep duration and daily activity, indicating that higher sleep durations were generally associated with lower total daily step counts.
+
 ## Problem 3 - Affective Visualization 
 
 ### a. Describe An Affective Visualization 
