@@ -1,26 +1,30 @@
 ---
 title: "Homework 3 Code"
 author: "Matthew Schoen"
+date: May 28, 2026 
+source: editor 
 format: pdf
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+# Set Up 
 
 ```{r}
-1 + 1
+#| label: set-up
+#| message: false
+
+# Reading in necessary packages 
+library(tidyverse)
+library(here)
+library(janitor)
+library(readxl)
+
+# Storing kelp data as specified object 
+kelp <- read_csv(
+  here("data", "temp-kelp.csv"))
+
+# Storing personal data as specificed object 
+step_count <- read_csv(
+  here("data", "MyData_HW3_Format.csv"))
 ```
 
-You can add options to executable code like this 
 
-```{r}
-#| echo: false
-2 * 2
-```
-
-The `echo: false` option disables the printing of code (only output is displayed).
