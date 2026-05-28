@@ -158,8 +158,13 @@ cor.test(x = kelp$temp_c,
          method = "spearman")
 ```
 
+**Write-Up:**
+
+Both the Pearson correlation test (p < 0.01) and the Spearman-rank correlation test (p < 0.01) both gave results that rejected the null hypothesis of no relationship existing between ocean temperature and giant kelp frond elongation rates. For both tests, the p-values were less than $\alpha$ = 0.05. Additionally, both tests indicated a strong negative relationship between the two variables with the Pearson test identifying a strong negative relationship between ocean temperature and giant kelp frond elongation rate (Pearson's product-moment correlation, t(30) = -5.19, p < 0.01, $\alpha$ = 0.05, CI[-0.836, -0.446]) and the Spearman rank correlation test identifying a strong negative monotonic relationship (Spearman rank correlation test: $\rho$ = -0.689, S = 9216, p < 0.01). These results indicate that as ocean temperature increases, kelp elongation rate consistently decreases. 
 
 ## Problem 2 - Personal Data 
+
+
 
 ### a. Updating Your Visualizations
 
