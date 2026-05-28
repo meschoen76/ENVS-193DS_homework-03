@@ -68,14 +68,96 @@ To evaluate the strength of the relationship between temperature ($C^o$) and gia
 
 ```{r}
 #| label: assumptions-test
+
+# Creating a ggplot base layer using kelp dataset 
+  ggplot(data = kelp, 
+         mapping = aes(x = temp_c,
+                       y = kelp_elong)) +
+  
+  # First layer is a scatter plot to visualize individual observations 
+  geom_point(size = 2,
+             alpha = 0.7,
+             color = "#2E8B57",
+             shape = 21) + 
+  # Second layer is a line of best fit using a linear regression
+  geom_smooth(method = "lm",
+              color = "black",
+              linewidth = 1
+             ) + 
+  # Using custom theme 
+  theme_minimal() + 
+  # Relabeling x & y axes
+  labs(x = expression("Ocean Temperature (C"^o~")"),
+       y = expression("Kelp Elongation Rate (cm day"^-1~")"),
+       title = "The Effect of Ocean Water Temperature On 
+       Kelp Elongation Rate")
 ```
 
+```{r}
+#| label: checking-normality-elongation
+
+# ggplot as base layer 
+  ggplot(data = kelp,
+         mapping = aes(sample = kelp_elong)) +
+  # first layer is QQ plot
+  geom_qq() + 
+  # second layer is QQ line 
+  geom_qq_line(color = "red") + 
+  # updating theme 
+  theme_minimal() + 
+  # updating title 
+  labs(title = expression("QQ Plot for Kelp Elongation Rate (cm day"^-1~")"))
+  
+```
+
+```{r}
+#| label: checking-normality-temperature
+
+# ggplot as the base layer 
+   ggplot(data = kelp, 
+    mapping = aes(sample = temp_c)) + 
+  # first layer is the qq plot 
+  geom_qq() + 
+  # second layer is the qq plot line 
+  geom_qq_line(color = "red") + 
+  # updating theme 
+  theme_minimal() + 
+  # updating title 
+  labs(title = expression("QQ Plot for Ocean Water Temperature (C"^o~")"))
+```
+
+**Write-Up:**
+
+To evaluate whether a Pearson correlation test or a Spearman-rank correlation test should be used, I assessed the linearity of the two data in addition to each variable's distribution. Using a scatterplot with a fitted linear regression, it was determined that the data *appears* to have somewhat of a negatively linear relationship where as ocean temperature increases, kelp elongation rate decreases. Using qq plots, it was determined that both Ocean Temperature and Kelp Elongation Rate are normally distributed as data points fall along a liner line of best fit. 
+
+```{r}
+#| label: Pearson-correlation
+#| message: True
+
+# Running a Pearson corrleation test 
+cor.test(x = kelp$temp_c,
+         y = kelp$kelp_elong,
+         method = "pearson")
+```
 
 ### d. Results Communication 
 
+To evaluate the strength of the relationship between ocean temperature and giant kelp frond elongation rate, I used a Pearson correlation test as both variables were continuous and quantitative, followed a relatively negatively linear relationship, and had a normal distribution. In running the test, a strong negative relationship was found between ocean temperature and giant kelp frond elongation rate where kelp elongation rate decreases as ocean temperature increases (Pearson's product-moment correlation, t(30) = -5.19, p < 0.01, $\alpha$ = 0.05, CI [-0.836, -0.446]).
+
 ### e. Test Implications 
 
+The results of this suggest that increasing ocean temperatures are associated with significantly lower giant kelp front elongation rates. As giant kelp forests provide habitat, food, and ecosystem stability for marine organisms, reduce growth rates could have wide-spread ecological consequences as ocean temperatures continue to rise due to climate change. 
 ### f. Double Check Your Own Work 
+
+```{r}
+#| label: Spearman-rank-correlation-test
+
+# Running a spearman-rank correlation test 
+cor.test(x = kelp$temp_c,
+         y = kelp$kelp_elong,
+         method = "spearman")
+```
+
 
 ## Problem 2 - Personal Data 
 
