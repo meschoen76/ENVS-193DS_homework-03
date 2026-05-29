@@ -255,11 +255,19 @@ The relationship between sleep duration (minutes) and total daily step count acr
 
 ### a. Describe An Affective Visualization 
 
+
+
 ### b. Create A Sketch 
+
+
 
 ### c. Make A Draft 
 
+
+
 ### d. Write An Artist Statement 
+
+
 
 ### e. Prep Your Materials 
 
@@ -272,7 +280,7 @@ View my slides [HERE](https://docs.google.com/presentation/d/12_YXdsN_ER_R2O6Hfs
 The authors used paired t-tests to evaluate whether acute sleep deprivation significantly affected skeletal muscle protein synthesis and hormone concentrations in young adults. The paired t-test was appropriate because the same participants experienced both the control and sleep deprivation conditions, allowing the authors to directly compare within-subject physiological responses between treatments.
 
 ![Figure 1: Comparison of testosterone levels across test subjects between control (CON) and
-deprivation (DEP) conditions where red dots are males and blue dots are females](image/Sleep_Dep_Fig.png)
+deprivation (DEP) conditions where red dots are males and blue dots are females.](../images/sleep_dep_fig.png)
 
 ### b. Visual Clarity 
 
