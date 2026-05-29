@@ -42,26 +42,26 @@ To evaluate the strength of the relationship between temperature ($C^o$) and gia
 
 # Creating a ggplot base layer using kelp dataset 
   ggplot(data = kelp, 
-         mapping = aes(x = temp_c,
-                       y = kelp_elong)) +
+         mapping = aes(x = temp_c, # x-axis is temp
+                       y = kelp_elong)) + # y-axis is kelp elongationo 
   
   # First layer is a scatter plot to visualize individual observations 
-  geom_point(size = 2,
-             alpha = 0.7,
-             color = "#2E8B57",
-             shape = 21) + 
+  geom_point(size = 2, # adjusting size 
+             alpha = 0.7, # adjusting opacity
+             color = "#2E8B57", # adjusting color to green
+             shape = 21) + # adjusting shape type
   # Second layer is a line of best fit using a linear regression
-  geom_smooth(method = "lm",
-              color = "black",
-              linewidth = 1
+  geom_smooth(method = "lm", # running a linear regression
+              color = "black", # making the line black 
+              linewidth = 1 # changing linewidth
              ) + 
   # Using custom theme 
   theme_minimal() + 
   # Relabeling x & y axes
-  labs(x = expression("Ocean Temperature (C"^o~")"),
-       y = expression("Kelp Elongation Rate (cm day"^-1~")"),
-       title = "The Effect of Ocean Water Temperature On 
-       Kelp Elongation Rate")
+  labs(x = expression("Ocean Temperature (C"^o~")"), # expression is used to properly display celsius
+       y = expression("Kelp Elongation Rate (cm day"^-1~")"), # expression used to properly display unit
+       title = "The Effect of Ocean Water Temperature On
+       Kelp Elongation Rate") # custom title
 ```
 
 ### c. Check Your Assumptions and Run Your Test 
@@ -71,38 +71,38 @@ To evaluate the strength of the relationship between temperature ($C^o$) and gia
 
 # Creating a ggplot base layer using kelp dataset 
   ggplot(data = kelp, 
-         mapping = aes(x = temp_c,
-                       y = kelp_elong)) +
+         mapping = aes(x = temp_c, # x-axis is temp 
+                       y = kelp_elong)) + # y-axis is kelp elongation 
   
   # First layer is a scatter plot to visualize individual observations 
-  geom_point(size = 2,
-             alpha = 0.7,
-             color = "#2E8B57",
-             shape = 21) + 
+  geom_point(size = 2, # choosinig size of point
+             alpha = 0.7, # adjusting opacity 
+             color = "#2E8B57", # adjusting color 
+             shape = 21) + # choosing specific shape type
   # Second layer is a line of best fit using a linear regression
-  geom_smooth(method = "lm",
-              color = "black",
-              linewidth = 1
+  geom_smooth(method = "lm", # running a linear regression 
+              color = "black", # choosing line color 
+              linewidth = 1 # selecting linewidth 
              ) + 
   # Using custom theme 
   theme_minimal() + 
   # Relabeling x & y axes
-  labs(x = expression("Ocean Temperature (C"^o~")"),
-       y = expression("Kelp Elongation Rate (cm day"^-1~")"),
-       title = "The Effect of Ocean Water Temperature On 
-       Kelp Elongation Rate")
+  labs(x = expression("Ocean Temperature (C"^o~")"), # using expression to properly display celsius 
+       y = expression("Kelp Elongation Rate (cm day"^-1~")"), # using expression to properly show unit 
+       title = "The Effect of Ocean Water Temperature On  
+       Kelp Elongation Rate") # creating custom title 
 ```
 
 ```{r}
 #| label: checking-normality-elongation
 
 # ggplot as base layer 
-  ggplot(data = kelp,
-         mapping = aes(sample = kelp_elong)) +
+  ggplot(data = kelp, 
+         mapping = aes(sample = kelp_elong)) + # specifying use of kelp elongation
   # first layer is QQ plot
   geom_qq() + 
   # second layer is QQ line 
-  geom_qq_line(color = "red") + 
+  geom_qq_line(color = "red") + # making line red 
   # updating theme 
   theme_minimal() + 
   # updating title 
@@ -115,15 +115,15 @@ To evaluate the strength of the relationship between temperature ($C^o$) and gia
 
 # ggplot as the base layer 
    ggplot(data = kelp, 
-    mapping = aes(sample = temp_c)) + 
+    mapping = aes(sample = temp_c)) + # specifying use of temperature 
   # first layer is the qq plot 
   geom_qq() + 
   # second layer is the qq plot line 
-  geom_qq_line(color = "red") + 
+  geom_qq_line(color = "red") + # making line red 
   # updating theme 
   theme_minimal() + 
   # updating title 
-  labs(title = expression("QQ Plot for Ocean Water Temperature (C"^o~")"))
+  labs(title = expression("QQ Plot for Ocean Water Temperature (C"^o~")")) #using expression to properly display celsius
 ```
 
 **Write-Up:**
@@ -134,10 +134,10 @@ To evaluate whether a Pearson correlation test or a Spearman-rank correlation te
 #| label: Pearson-correlation
 #| message: True
 
-# Running a Pearson corrleation test 
-cor.test(x = kelp$temp_c,
-         y = kelp$kelp_elong,
-         method = "pearson")
+# Running a Pearson correlation test 
+cor.test(x = kelp$temp_c, # specifying which variable to use for x
+         y = kelp$kelp_elong, # specifying which variable to use for y
+         method = "pearson") # dictating a pearson test 
 ```
 
 ### d. Results Communication 
@@ -153,9 +153,9 @@ The results of this suggest that increasing ocean temperatures are associated wi
 #| label: Spearman-rank-correlation-test
 
 # Running a spearman-rank correlation test 
-cor.test(x = kelp$temp_c,
-         y = kelp$kelp_elong,
-         method = "spearman")
+cor.test(x = kelp$temp_c, # dictating which variable for x
+         y = kelp$kelp_elong, # dictating which variable for y 
+         method = "spearman") # dictating a spearman test 
 ```
 
 **Write-Up:**
@@ -203,11 +203,11 @@ ggplot(data = my_data_summary,
        subtitle = "Most Reccent Observation: May 27, 2026") +
   theme_classic() + 
   # Customizing plot text and appearance 
-  theme(plot.title = element_text(face = "bold",
-                                  color = "gray10"),
-        plot.subtitle = element_text(color = "gray35"),
-        axis.title = element_text(face = "bold"),
-        axis.text = element_text(color = "gray20"))
+  theme(plot.title = element_text(face = "bold", # bolding the title
+                                  color = "gray10"), #making the title gray
+        plot.subtitle = element_text(color = "gray35"), # choosing color
+        axis.title = element_text(face = "bold"), # bolding the axes
+        axis.text = element_text(color = "gray20")) # axes color
 ```
 
 ```{r}
@@ -233,11 +233,11 @@ For The Day & the Duration of Sleep Achieved",
   # Updating the theme to remove grid lines 
   theme_classic() + 
   # Customizing the theme elements 
-   theme(plot.title = element_text(face = "bold",
-                                  color = "gray10"),
-        plot.subtitle = element_text(color = "gray35"),
-        axis.title = element_text(face = "bold"),
-        axis.text = element_text(color = "gray20"))
+  theme(plot.title = element_text(face = "bold", # bolding the title
+                                  color = "gray10"), #making the title gray
+        plot.subtitle = element_text(color = "gray35"), # choosing color
+        axis.title = element_text(face = "bold"), # bolding the axes
+        axis.text = element_text(color = "gray20")) # axes color
   
 ```
 
@@ -255,19 +255,33 @@ The relationship between sleep duration (minutes) and total daily step count acr
 
 ### a. Describe An Affective Visualization 
 
-
+My affective visualization will explore the relationship between physical activity, recovery, and fatigue using my personal step count and sleep duration data. Rather than presenting the data as a traditional graph, I want to represent each day as an abstract visual form where color intensity and shape communicate how physical exertion and recovery affect each other. Days with high activity and lower sleep will appear more visually dense and harsh, while days with greater recovery will appear softer and more balanced. The goal of the piece is to communicate the emotional and physical rhythm of maintaining activity and recovery over time rather than simply presenting numerical trends.
 
 ### b. Create A Sketch 
 
-
+![](../images/hw3_sketch.png)
 
 ### c. Make A Draft 
 
-
+![](../images/hw3_draft.jpg)
 
 ### d. Write An Artist Statement 
 
+**What is the Content?**
 
+The content of my piece represents the relationship between my daily physical activity and recovery patterns over time using my personal step count and sleep duration data. Each vertical mark represents a different day, where the height of the mark reflects my level of activity while the colors communicate variation in energy, recovery, and routine throughout the observation period.
+
+**What were the influences?**
+
+I was influenced by affective data visualization projects such as Dear Data by Giorgia Lupi and Stefanie Posavec ('Week 51, A Week of Privacy'), as well as abstract environmental visualizations that prioritize emotional interpretation over statistical communication. I wanted the visualization to feel expressive rather than structured like a traditional graph.
+
+**What is the form of the work?**
+
+Although the draft shown was created digitally using a sketching app on my iPad, the final version will be on paper and colored pencils will be used to create more natural color gradients. This will also result in softer colors that I feel will aid in conveying the energy of the colors better.
+
+**What was the process for creation?**
+
+I analyzed the total minutes slept each night along with that day's total step count, physical activity performed, as well as the other variables such as caffeine intake to understand how I felt each day. It was interesting to see that a poor night's sleep didn't necessarily affect that day's 'performance' but it effected the following day(s) performance(s). Using this insight, I then decided on colors I wanted to pair how I felt overall each day.  
 
 ### e. Prep Your Materials 
 
