@@ -4,6 +4,7 @@ author: "Matthew Schoen"
 date: May 28, 2026 
 source: editor 
 format: pdf
+toc: true
 ---
 
 # Part 1: Set Up 
