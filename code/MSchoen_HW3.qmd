@@ -269,11 +269,20 @@ View my slides [HERE](https://docs.google.com/presentation/d/12_YXdsN_ER_R2O6Hfs
 
 ### a. Revisit and Summarize 
 
+The authors used paired t-tests to evaluate whether acute sleep deprivation significantly affected skeletal muscle protein synthesis and hormone concentrations in young adults. The paired t-test was appropriate because the same participants experienced both the control and sleep deprivation conditions, allowing the authors to directly compare within-subject physiological responses between treatments.
+
+![Figure 1: Comparison of testosterone levels across test subjects between control (CON) and
+deprivation (DEP) conditions where red dots are males and blue dots are females](image/Sleep_Dep_Fig.png)
+
 ### b. Visual Clarity 
 
-### c. Aesthetic Clarity 
+The figure communicates the statistical comparison between the control and sleep deprivation conditions relatively clearly as the x-axis logically separates the two treatment groups while the y-axis quantitatively represents testosterone concentration. Additionally, the authors included the individual data points for each participant rather than only displaying summary statistics, which improves transparency by allowing the reader to observe the spread and variability of the data directly. However, the figure could be improved further by explicitly including confidence intervals or additional statistical annotations to better communicate the magnitude of the differences between conditions.
+
+### c. Aesthetic Clarity
+
+The figure has a relatively strong data:ink ratio because most of the visual elements directly contribute to communicating the underlying data rather than serving "decorative" purposes. The use of simple axes, limited colors, and minimal background elements reduces visual clutter and keeps the viewer focused on the differences between treatment conditions. However, the figure could still be simplified slightly by reducing unnecessary grid emphasis and making the labeling of the treatment groups more visually distinct.
 
 ### d. Reccomendations 
 
-
+One improvement the authors could make would be to include confidence interval bars or effect size information directly on the figure to provide additional statistical context beyond the individual data points alone. Additionally, slightly increasing the contrast between the control and deprivation conditions through more distinct color choices could improve readability and help viewers more quickly distinguish between treatments. Finally, including a short annotation of the statistical test result directly within the figure panel would make it easier for readers to immediately interpret the significance of the observed differences without needing to search through the main text.
 
