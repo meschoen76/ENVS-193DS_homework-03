@@ -14,6 +14,6 @@ The 'images' folder contains the two rendered plots for my slides presentation a
 
 ## Rendered Output 
 
-The rendered homework output can be viewed [HERE]https://github.com/meschoen76/ENVS-193DS_homework-03/blob/main/code/MSchoen_HW3.pdf 
+The rendered homework output can be viewed [HERE](https://github.com/meschoen76/ENVS-193DS_homework-03/blob/main/code/MSchoen_HW3.pdf)
 
 

@@ -51,11 +51,6 @@ To evaluate the strength of the relationship between temperature ($C^o$) and gia
              alpha = 0.7, # adjusting opacity
              color = "#2E8B57", # adjusting color to green
              shape = 21) + # adjusting shape type
-  # Second layer is a line of best fit using a linear regression
-  geom_smooth(method = "lm", # running a linear regression
-              color = "black", # making the line black 
-              linewidth = 1 # changing linewidth
-             ) + 
   # Using custom theme 
   theme_minimal() + 
   # Relabeling x & y axes
@@ -80,11 +75,6 @@ To evaluate the strength of the relationship between temperature ($C^o$) and gia
              alpha = 0.7, # adjusting opacity 
              color = "#2E8B57", # adjusting color 
              shape = 21) + # choosing specific shape type
-  # Second layer is a line of best fit using a linear regression
-  geom_smooth(method = "lm", # running a linear regression 
-              color = "black", # choosing line color 
-              linewidth = 1 # selecting linewidth 
-             ) + 
   # Using custom theme 
   theme_minimal() + 
   # Relabeling x & y axes
@@ -143,11 +133,12 @@ cor.test(x = kelp$temp_c, # specifying which variable to use for x
 
 ### d. Results Communication 
 
-To evaluate the strength of the relationship between ocean temperature and giant kelp frond elongation rate, I used a Pearson correlation test as both variables were continuous and quantitative, followed a relatively negatively linear relationship, and had a normal distribution. In running the test, a strong negative relationship was found between ocean temperature and giant kelp frond elongation rate where kelp elongation rate decreases as ocean temperature increases (Pearson's product-moment correlation, t(30) = -5.19, p < 0.01, $\alpha$ = 0.05, CI [-0.836, -0.446]).
+To evaluate the strength of the relationship between ocean temperature and giant kelp frond elongation rate, I used a Pearson correlation test as both variables were continuous and quantitative, followed a relatively negatively linear relationship, and had a normal distribution. In running the test, a **moderate** negative relationship was found between ocean temperature and giant kelp frond elongation rate where kelp elongation rate decreases as ocean temperature increases (Pearson's product-moment correlation, t(30) = -5.19, p < 0.01, $\alpha$ = 0.05, CI [-0.836, -0.446]).
 
 ### e. Test Implications 
 
 The results of this suggest that increasing ocean temperatures are associated with significantly lower giant kelp front elongation rates. As giant kelp forests provide habitat, food, and ecosystem stability for marine organisms, reduce growth rates could have wide-spread ecological consequences as ocean temperatures continue to rise due to climate change. 
+
 ### f. Double Check Your Own Work 
 
 ```{r}
@@ -161,7 +152,7 @@ cor.test(x = kelp$temp_c, # dictating which variable for x
 
 **Write-Up:**
 
-Both the Pearson correlation test (p < 0.01) and the Spearman-rank correlation test (p < 0.01) both gave results that rejected the null hypothesis of no relationship existing between ocean temperature and giant kelp frond elongation rates. For both tests, the p-values were less than $\alpha$ = 0.05. Additionally, both tests indicated a strong negative relationship between the two variables with the Pearson test identifying a strong negative relationship between ocean temperature and giant kelp frond elongation rate (Pearson's product-moment correlation, t(30) = -5.19, p < 0.01, $\alpha$ = 0.05, CI[-0.836, -0.446]) and the Spearman rank correlation test identifying a strong negative monotonic relationship (Spearman rank correlation test: $\rho$ = -0.689, S = 9216, p < 0.01). These results indicate that as ocean temperature increases, kelp elongation rate consistently decreases. 
+Both the Pearson correlation test (p < 0.01) and the Spearman-rank correlation test (p < 0.01) both gave results that rejected the null hypothesis of no relationship existing between ocean temperature and giant kelp frond elongation rates. For both tests, the p-values were less than $\alpha$ = 0.05. Additionally, both tests indicated a **moderately** negative relationship between the two variables with the Pearson test identifying a **moderate** negative relationship between ocean temperature and giant kelp frond elongation rate (Pearson's product-moment correlation, **Pearson's r = -0.688**, t(30) = -5.19, p < 0.01, $\alpha$ = 0.05, CI[-0.836, -0.446]) and the Spearman rank correlation test identifying a **moderate** negative monotonic relationship (Spearman rank correlation test: $\rho$ = -0.689, S = 9216, p < 0.01). These results indicate that as ocean temperature increases, kelp elongation rate consistently decreases. 
 
 ## Problem 2 - Personal Data 
 
@@ -221,10 +212,6 @@ ggplot(data = my_data_clean,
              size = 2,
              alpha = 0.7,
              shape = 21) + 
-  # Adding a linear regression trendline 
-  geom_smooth(method = "lm",
-              color = "gray25",
-              fill = "lightblue") +
   # Adding custom labels for the x and y axis
   labs(x = "Duration of Sleep (Minutes)",
        y = "Total Daily Steps Taken",
@@ -250,7 +237,7 @@ Average daily step count grouped by day of the week using observations collected
 
 **Figure 2:**
 
-The relationship between sleep duration (minutes) and total daily step count across all observations collected during the study period. The fitted linear regression line suggests a slight negative relationship between sleep duration and daily activity, indicating that higher sleep durations were generally associated with lower total daily step counts.
+The relationship between sleep duration (minutes) and total daily step count across all observations collected during the study period. The points represent the individual observations recorded during the study period. 
 
 ## Problem 3 - Affective Visualization 
 

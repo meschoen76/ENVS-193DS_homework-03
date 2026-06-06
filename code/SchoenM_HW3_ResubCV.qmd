@@ -1,0 +1,101 @@
+---
+title: "Homework #3 Resubmission CV"
+author: "Matthew Schoen"
+date: June 6, 2026
+format: pdf
+editor: source
+---
+
+# Problem 1b
+
+## *What Was Wrong?*
+
+A trend line should not have been used as the problem states to only evaluate correlation.
+
+## *How Should This Be Fixed?*
+
+This was fixed by removing the trendline from the visualizations in both 1b and 1c (I did not receive points off for 1c but corrected it anyways). 
+
+## *How Does Fixing This improve the Quality of Work?*
+
+Removing the trendline not only allows the individual observations to be seen better, it prevents the viewer of the material from making assumptions regarding the relationships between the two variables that may be incorrect. 
+
+# Problem 1d
+
+## *What Was Wrong?*
+
+Even though I have the correct interpretation of Pearson's, I should opt for the "smaller" of the correlation levels. 
+
+## *How Should This Be Fixed?*
+
+Instead of saying "a strong negative relationship was found", I can just say "moderately negative relationship was found".
+
+## *How Does Fixing This improve the Quality of Work?*
+
+By using a "smaller" term to describe the relationship between the two variables, it ensures there is no risk of overstating their relationship. This is crucial in science/research as just because this study produced these specific results, another study in the coming years could produce slightly or completely different results. 
+
+# Problem 1f
+
+## *What Was Wrong?*
+
+Similar to problem 1d, I can just say "moderately negative relationship" instead of saying "strong negative relationship". Additionally, I should have included the Pearson's r-value for the test. 
+
+## *How Should This Be Fixed?*
+
+This was fixed by updating the descriptions from saying "strong negative relationship" to "moderate negative relationship". The second issue was addressed by including the Pearson's R value (-0.688) in the overall outputs for the test (shown below):
+
+"(Pearson's product-moment correlation, **Pearson's r = -0.688**, t(30) = -5.19, p < 0.01, $\alpha$ = 0.05, CI[-0.836, -0.446])"
+
+## *How Does Fixing This improve the Quality of Work?*
+
+By using a "smaller" term to describe the relationship between the two variables, it ensures there is no risk of overstating their relationship. This is crucial in science/research as just because this study produced these specific results, another study in the coming years could produce slightly or completely different results. 
+
+Additionally, stating the Pearson's r-value for the test "proves" the findings that are being stated. 
+
+# Problem 2b
+
+## *What Was Wrong?*
+
+I didn't describe what the points and the ribbon represent in the plot 
+
+## *How Should This Be Fixed?*
+
+As the line was removed from the visualization regarding the needed correction for problem 2a, the description was updated accordingly. It now states that the points represent individual observations recorded during the study period and there is no need to state whar the ribbon represents as it is now not present. 
+
+## *How Does Fixing This improve the Quality of Work?*
+
+Updating the descriptions to accurately depict and explain what the visualization assists viewers in completely understanding the relationships attempting to be shown by the visualization. Without an accurate description, viewers may be left to interpret findings incorrectly. 
+
+# General Formatting 
+
+## *What Was Wrong?*
+
+The head for problem 1f doesn't display correctly and there is a message in 2a that shouldn't be showing up. 
+
+## *How Should This Be Fixed?*
+
+The 1f header was fixed by adding a space between the line containing the header and the previous line containing text. 
+
+The geom_smooth message was fixed by removing the geom_smooth line from the code. 
+
+## *How Does Fixing This improve the Quality of Work?*
+
+1f Header: This allows for the viewer of the work to not only find the specific problem easier, but it just makes reading the assignment easier and cleaner overall. 
+
+2a: By not utilizing the linear regression line provided by geom_smooth, a potentially false relationship between the two variables isn't presented to the audience. 
+
+# Git/Github Points
+
+## *What Was Wrong?*
+
+The rendered pdf link is not shown as a hyperlink
+
+## *How Should This Be Fixed?*
+
+This should be fixed by correcting the formatting to properly render the hyperlink.
+
+## *How Does Fixing This improve the Quality of Work?*
+
+1f Header: This allows for the viewer of the work to not only find the specific problem easier, but it just makes reading the assignment easier and cleaner overall. 
+
+
