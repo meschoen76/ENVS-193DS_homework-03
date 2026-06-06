@@ -60,7 +60,7 @@ I didn't describe what the points and the ribbon represent in the plot
 
 ## *How Should This Be Fixed?*
 
-As the line was removed from the visualization regarding the needed correction for problem 2a, the description was updated accordingly. It now states that the points represent individual observations recorded during the study period and there is no need to state whar the ribbon represents as it is now not present. 
+As the line was removed from the visualization regarding the needed correction for problem 2a, the description was updated accordingly. It now states that the points represent individual observations recorded during the study period and there is no need to state what the ribbon represents as it is now not present. 
 
 ## *How Does Fixing This improve the Quality of Work?*
 
@@ -71,7 +71,6 @@ Updating the descriptions to accurately depict and explain what the visualizatio
 ## *What Was Wrong?*
 
 The head for problem 1f doesn't display correctly and there is a message in 2a that shouldn't be showing up. 
-
 ## *How Should This Be Fixed?*
 
 The 1f header was fixed by adding a space between the line containing the header and the previous line containing text. 
@@ -92,10 +91,10 @@ The rendered pdf link is not shown as a hyperlink
 
 ## *How Should This Be Fixed?*
 
-This should be fixed by correcting the formatting to properly render the hyperlink.
+This should be fixed by correcting the formatting to properly render the hyperlink. The link url was missing the parentheses encapsulating it. 
 
 ## *How Does Fixing This improve the Quality of Work?*
 
-1f Header: This allows for the viewer of the work to not only find the specific problem easier, but it just makes reading the assignment easier and cleaner overall. 
+This makes the README file cleaner to look at! 
 
 
